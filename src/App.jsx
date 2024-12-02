@@ -4,6 +4,7 @@ import About from "./project/About"
 import Contact from "./project/Contact"
 import Footer from "./project/Footer"
 import FutsalVenues from "./project/Futsal"
+import BookingSlot from "./project/BookingSlots"
 function App() {
  
 
@@ -12,6 +13,7 @@ function App() {
     <Home/>
     <About/>
     <FutsalVenues/>
+    <BookingSlot/>
     <Contact/>
     <Footer/>
    
