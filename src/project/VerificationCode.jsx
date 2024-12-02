@@ -49,13 +49,13 @@ export default function VerificationCode() {
   const handleVerify = () => {
     const verificationCode = otp.join("");
     console.log("Verification code:", verificationCode);
-    // Add verification logic here
+    // our verification logic here
   };
 
   const handleRequestAgain = (e) => {
     e.preventDefault();
     console.log("Requesting new code");
-    // Add request logic here
+    // our request logic here
   };
   return (
     <div className="flex min-h-screen items-center font-roboto justify-center bg-[#04153F] px-4 sm:px-6 lg:px-8">
