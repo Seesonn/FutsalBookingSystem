@@ -1,6 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Search, Filter, X } from 'lucide-react';
-import f1 from "../assets/about.jpg";
+import f1 from "../assets/f1.jpg";
+import f2 from "../assets/f2.jpg";
+import f3 from "../assets/f3.jpg";
+import f4 from "../assets/f4.jpg";
+
 
 export default function FutsalVenues() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -19,19 +23,19 @@ export default function FutsalVenues() {
       id: 2,
       name: "ARENA FUTSAL",
       location: "Biratchock",
-      image: f1
+      image: f2
     },
     {
       id: 3,
       name: "SPORTHUB FUTSAL",
       location: "Biratnagar",
-      image: f1
+      image: f3
     },
     {
       id: 4,
       name: "SD FUTSAL",
       location: "Itahari",
-      image: f1
+      image: f4
     },
   ];
 
