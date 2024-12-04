@@ -24,7 +24,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/futsal-venues" element={<FutsalCardPage/>} />
-            <Route path="/booking" element={<BookingSlot />} />
+            <Route path="/book" element={<BookingSlot />} />
             <Route path="/verify" element={<VerificationCode />} />
           </Routes>
         </main>
