@@ -92,7 +92,7 @@ export default function BookingSlot() {
   };
 
   return (
-    <div className=" mini-h-screen bg-white bg-opacity-60 backdrop-blur-lg p-4 sm:p-8 md:p-12 rounded-lg shadow-[0_0_20px_rgba(255,255,255,0.15)] overflow-hidden relative">
+    <div className=" mini-h-screen bg-white bg-opacity-80 backdrop-blur-lg p-4 sm:p-8 md:p-12  shadow-[0_0_20px_rgba(255,255,255,0.15)] overflow-hidden relative">
       <header className="text-center mb-8">
       <h1 className="text-[#04153F] text-4xl font-bold mb-8 text-center">Booking Schedule</h1>
         <p className="text-black text-lg mt-4 ">Don't lose your chance, book now!</p>
