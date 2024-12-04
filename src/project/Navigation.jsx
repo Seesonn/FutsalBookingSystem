@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import logooo from"../assets/logo.png";
+import { Link } from 'react-router-dom'; 
+import logooo from "../assets/logo.png";
 
 const Navigation = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -20,7 +21,7 @@ const Navigation = () => {
   }, []);
 
   return (
-    <header className="relative flex justify-between items-center py-4  ">
+    <header className="relative flex justify-between items-center py-4">
       <div className="logo w-[100px] ml-2 z-20">
         <img src={logooo} alt="Logo" width={120} height={40} />
       </div>
@@ -32,12 +33,14 @@ const Navigation = () => {
         transition-all duration-300 ease-in-out z-30
         ${isNavOpen ? 'translate-x-0' : 'translate-x-full md:translate-x-0'}
       `}>
-        <a href="#home" className="hover:text-[#40fe90] py-3 px-3 w-full md:w-auto text-white transition-colors duration-200">HOME</a>
-        <a href="#" className="hover:text-[#40fe90] py-3 px-3 w-full md:w-auto text-white transition-colors duration-200">ABOUT</a>
-        <a href="#" className="hover:text-[#40fe90] py-3 px-3 w-full md:w-auto text-white transition-colors duration-200">FUTSAL</a>
-        <a href="#" className="hover:text-[#40fe90] py-3 px-3 w-full md:w-auto text-white transition-colors duration-200">ADMIN</a>
-        <a href="#" className="hover:text-[#40fe90] py-3 px-3 w-full md:w-auto text-white transition-colors duration-200">CONTACT</a>
-        <button className="bg-[#A8BA0A] text-[#04153F] px-4 py-2 rounded-lg font-semibold hover:bg-[#bbe000a0] hover:text-white transition-colors duration-200 w-full md:w-auto">SIGN IN</button>
+        <Link to="/" className="hover:text-[#40fe90] py-3 px-3 w-full md:w-auto text-white transition-colors duration-200">HOME</Link>
+        <Link to="/about" className="hover:text-[#40fe90] py-3 px-3 w-full md:w-auto text-white transition-colors duration-200">ABOUT</Link>
+        <Link to="/futsal-venues" className="hover:text-[#40fe90] py-3 px-3 w-full md:w-auto text-white transition-colors duration-200">FUTSAL</Link>
+        <Link to="/admin" className="hover:text-[#40fe90] py-3 px-3 w-full md:w-auto text-white transition-colors duration-200">ADMIN</Link>
+        <Link to="/contact" className="hover:text-[#40fe90] py-3 px-3 w-full md:w-auto text-white transition-colors duration-200">CONTACT</Link>
+       <Link to="/login"><button className="bg-[#A8BA0A] text-[#04153F] px-4 py-2 rounded-lg font-semibold hover:bg-[#bbe000a0] hover:text-white transition-colors duration-200 w-full md:w-auto">
+          SIGN IN
+        </button></Link>
       </nav>
       <button
         className="md:hidden z-30 w-8 h-8 flex flex-col justify-center items-center"
@@ -60,4 +63,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-
