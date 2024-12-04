@@ -92,10 +92,10 @@ export default function BookingSlot() {
   };
 
   return (
-    <div className="bg-[#04153F] bg-opacity-70 backdrop-blur-lg p-4 sm:p-8 md:p-12 max-w-screen-lg mx-auto rounded-lg shadow-[0_0_20px_rgba(255,255,255,0.15)] overflow-hidden relative">
+    <div className=" mini-h-screen bg-black bg-opacity-20 backdrop-blur-lg p-4 sm:p-8 md:p-12 rounded-lg shadow-[0_0_20px_rgba(255,255,255,0.15)] overflow-hidden relative">
       <header className="text-center mb-8">
-      <h1 className="text-[#D2D81D] text-4xl font-bold mb-8 text-center">Booking Schedule</h1>
-        <p className="text-white text-lg mt-4 ">Don't lose your chance, book now!</p>
+      <h1 className="text-[#04153F] text-4xl font-bold mb-8 text-center">Booking Schedule</h1>
+        <p className="text-black text-lg mt-4 ">Don't lose your chance, book now!</p>
       </header>
       <div className="flex justify-start mb-8 overflow-x-auto scrollbar-thin scrollbar-thumb-[#4CAF50] scrollbar-track-[#1a1a2e] py-2">
         {getNextWeek().map((date) => (
@@ -103,7 +103,7 @@ export default function BookingSlot() {
             key={date.toDateString()}
             className={`p-2 sm:p-3 rounded-lg text-center cursor-pointer min-w-[80px] max-w-[120px] mr-4 ${
               date.toDateString() === selectedDate.toDateString()
-                ? 'bg-[#D2D81D] text-white'
+                ? 'bg-green-100 text-black'
                 : 'bg-white text-black'
             } transition-transform`}
             onClick={() => handleDateClick(date)}
@@ -122,7 +122,7 @@ export default function BookingSlot() {
               key={slot}
               className={`p-2 sm:p-3 rounded-lg text-center font-semibold text-xs sm:text-sm min-h-[50px] flex flex-col justify-center ${
                 status === 'available'
-                  ? 'bg-[#40fe90] text-black cursor-pointer'
+                  ? 'bg-white text-black cursor-pointer'
                   : status === 'booked'
                   ? 'bg-[#ffd700] text-[#1a1a2e]'
                   : 'bg-[#cccccc] text-gray-600 cursor-not-allowed'
@@ -157,4 +157,3 @@ export default function BookingSlot() {
     </div>
   );
 }
-
