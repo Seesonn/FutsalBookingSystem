@@ -3,8 +3,8 @@ import heroImage from "../assets/about.jpg";
 export default function About() {
   return (
     <section id="about">
-      <div className="bg-[#04153F] font-roboto flex items-center justify-center p-4 sm:p-4 md:p-8">
-        <div className="bg-[#04153F] mini-h-screen rounded-[1rem] w-full max-w-7xl mx-auto p-12 shadow-[0_0_20px_rgba(255,255,255,0.15)]">
+      <div className="bg-[#04153F] font-roboto mini-h-screen flex items-center justify-center p-4 sm:p-4 md:p-8">
+        <div className="bg-[#04153F]  rounded-[1rem] w-full max-w-7xl mx-auto p-12 shadow-[0_0_20px_rgba(255,255,255,0.15)]">
           <h1 className="text-[#D2D81D] text-4xl font-bold mb-8 text-center">About</h1>
           <div className="flex flex-col lg:flex-row gap-8">
             <div className="space-y-6">
