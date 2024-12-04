@@ -9,7 +9,7 @@ import Footer from "./project/Footer";
 import VerificationCode from "./project/VerificationCode";
 import Login from "./project/Login";
 import Register from "./project/Register";
-import FutsalCardPage from "./project/FutsalcardPage";
+import FutsalCardPage from "./project/FutsalCardPage";
 import BookingSlot from "./project/BookingSlots";
 
 function App() {
