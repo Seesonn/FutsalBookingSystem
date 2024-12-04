@@ -1,15 +1,27 @@
 
 
-
-import React from 'react';
-import Soo from'../assets/messi.png';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Soo from '../assets/messi.png'
+import lbg from '../assets/ful.jpg'
 
 export default function Register() {
   return (
-    <div className="min-h-screen bg-[#04153F] font-roboto flex items-center justify-center p-4">
-      <div className="w-full max-w-4xl bg-green-100 bg-opacity-70 backdrop-blur-lg rounded-lg overflow-hidden flex flex-col md:flex-row shadow-lg">
+    <div className="min-h-screen w-full font-roboto flex items-center justify-center relative overflow-hidden">
+      
+      <div className="absolute inset-0 z-0">
+        <img
+          src={lbg}
+          alt="Background"
+          className="w-full h-full object-cover opacity-90"
+        />
+      </div>
+      
+      {/* Blur Overlay */}
+      <div className="absolute inset-0 backdrop-blur-sm z-10"></div>
+      <div className="w-full max-w-4xl bg-green-100 bg-opacity-10 backdrop-blur-lg rounded-lg overflow-hidden flex flex-col md:flex-row shadow-lg z-20 m-4">
         <div className="w-full md:w-1/2 p-8">
-          <h1 className="text-4xl font-bold mb-6 text-center text-[#04153F]">Sign Up</h1>
+          <h1 className="text-4xl font-bold mb-6 text-center text-white">Sign Up</h1>
           <form className="space-y-4">
             <input
               type="text"
@@ -24,11 +36,11 @@ export default function Register() {
             <input
               type="password"
               placeholder="Create Password"
-               className="w-full p-3 bg-[#ebf8ff] rounded-md"
+              className="w-full p-3 bg-[#ebf8ff] rounded-md"
             />
             <input
               type="tel"
-              placeholder=" Number"
+              placeholder="Number"
               className="w-full p-3 bg-[#ebf8ff] rounded-md"
             />
             <input
@@ -49,23 +61,17 @@ export default function Register() {
                 </a>
               </label>
             </div>
-            <button className="w-full p-3 bg-[#04153F] text-white rounded-md flex items-center justify-center hover:bg-[#04153F]/90 transition-colors">
-              SIGN UP
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 ml-2"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
+            <Link to="/verify">
+              <button className="w-full p-3 bg-[#04153F] text-white rounded-md flex items-center justify-center hover:bg-[#04153F]/90 transition-colors">
+                SIGN UP
+              </button>
+            </Link>
+            <p className="mt-6 text-center text-sm text-white">
+              Already have an account?{' '}
+              <Link to="/login" className="text-white-400 hover:underline">
+                Login
+              </Link>
+            </p>
           </form>
         </div>
         <div className="w-full md:w-1/2 flex items-center justify-center p-8">
@@ -77,5 +83,7 @@ export default function Register() {
         </div>
       </div>
     </div>
-  );
+  )
 }
+
+
