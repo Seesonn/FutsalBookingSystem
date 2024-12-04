@@ -36,7 +36,6 @@ const Navigation = () => {
         <Link to="/" className="hover:text-[#40fe90] py-3 px-3 w-full md:w-auto text-white transition-colors duration-200">HOME</Link>
         <Link to="/about" className="hover:text-[#40fe90] py-3 px-3 w-full md:w-auto text-white transition-colors duration-200">ABOUT</Link>
         <Link to="/futsal-venues" className="hover:text-[#40fe90] py-3 px-3 w-full md:w-auto text-white transition-colors duration-200">FUTSAL</Link>
-        <Link to="/admin" className="hover:text-[#40fe90] py-3 px-3 w-full md:w-auto text-white transition-colors duration-200">ADMIN</Link>
         <Link to="/contact" className="hover:text-[#40fe90] py-3 px-3 w-full md:w-auto text-white transition-colors duration-200">CONTACT</Link>
        <Link to="/login"><button className="bg-[#A8BA0A] text-[#04153F] px-4 py-2 rounded-lg font-semibold hover:bg-[#bbe000a0] hover:text-white transition-colors duration-200 w-full md:w-auto">
           SIGN IN
