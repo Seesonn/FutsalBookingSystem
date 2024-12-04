@@ -14,7 +14,7 @@ const Hero = () => {
           JOIN NOW
         </button>
       </div>
-      <div className="image-con w-full md:w-[740px]  flex justify-center items-center">
+      <div className="image-con w-full md:w-[840px]  flex justify-center items-center">
         <img 
           src={hoo} 
           alt="Futsal player kicking ball" 
