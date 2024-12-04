@@ -1,17 +1,33 @@
+'use client'
+
 import React, { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Logi from "../assets/is.png";
-
+import bgImage from "../assets/ful.jpg";
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#04153F] font-roboto flex items-center  justify-center p-4">
-      <div className="w-full max-w-4xl bg-green-100 bg-opacity-70 backdrop-blur-lg rounded-lg overflow-hidden flex flex-col md:flex-row shadow-lg">
-        {/* Form Container */}
+    <div className="min-h-screen w-full font-roboto flex items-center justify-center relative overflow-hidden">
+     
+      <div className="absolute inset-0 z-0">
+        <img
+          src={bgImage}
+          alt="Background"
+          className="w-full h-full object-cover opacity-90"
+        />
+      </div>
+      
+      {/* Blur Overlay */}
+      <div className="absolute inset-0 backdrop-blur-sm z-10"></div>
+      
+     
+      <div className="w-full max-w-4xl bg-green-100 bg-opacity-10 backdrop-blur-lg rounded-lg overflow-hidden flex flex-col md:flex-row shadow-lg z-20 m-4">
+       
         <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
-          <h1 className="text-4xl font-bold mb-6 text-center text-[#04153F]">Login</h1>
+          <h1 className="text-4xl font-bold mb-6 text-center text-white">Login</h1>
           <form className="flex flex-col gap-4">
             <div className="relative">
               <input
@@ -39,33 +55,19 @@ export default function Login() {
               </button>
             </div>
             <div className="flex justify-end">
-              <a href="#" className="text-sm text-[#04153F] hover:underline">
+              <a href="#" className="text-sm text-white hover:underline">
                 Forgot Password?
               </a>
             </div>
-            <button className="w-full p-3 bg-[#04153F] text-white rounded-md flex items-center justify-center cursor-pointer hover:bg-[#04153F]">
+            <button className="w-full p-3 bg-[#04153F] text-white rounded-md flex items-center justify-center cursor-pointer hover:bg-[#04153F]/90 transition-colors">
               LOGIN
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 ml-2"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
             </button>
           </form>
-          <p className="mt-6 text-center text-sm text-gray-600">
+          <p className="mt-6 text-center text-sm text-white">
             Don't have an account yet?{' '}
-            <a href="#" className="text-[#04153F] hover:underline">
+            <Link to="/register" className="text-white hover:underline">
               Sign up
-            </a>
+            </Link>
           </p>
         </div>
         {/* Image Container */}
@@ -76,3 +78,4 @@ export default function Login() {
     </div>
   );
 }
+
