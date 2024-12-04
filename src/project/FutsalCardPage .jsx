@@ -42,7 +42,7 @@ const futsalVenues = [
   },
 ];
 
-export default function () {
+export default function FutsalCardPage () {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-100 to-white">
       <FutsalHeroSection/>
