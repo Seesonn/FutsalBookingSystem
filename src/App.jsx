@@ -10,11 +10,14 @@ import Login from "./project/Login";
 import Register from "./project/Register";
 import FutsalCardPage from "./project/FutsalcardPage";
 import BookingSlot from "./project/BookingSlots";
+import ForgotPassword from "./project/ForgetPassword";
+import CreatNewPassword from "./project/CreateNewPassword";
 
 function App() {
   return (
     <Router>
       <div className="bg-[#04153F] min-h-screen flex flex-col">
+        {/* bg-[#04153F] min-h-screen flex flex-col */}
         <Navigation />
         <main className="flex-grow">
           <Routes>
@@ -24,11 +27,13 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/futsal-venues" element={<FutsalCardPage/>} />
-            <Route path="/book" element={<BookingSlot />} />
+            <Route path="/booking" element={<BookingSlot />} />
             <Route path="/verify" element={<VerificationCode />} />
+            <Route path="/forget" element={<ForgotPassword />} />
           </Routes>
         </main>
         <Footer />
+         
       </div>
     </Router>
   );
