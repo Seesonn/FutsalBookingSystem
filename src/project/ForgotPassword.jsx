@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
-
 import fgImage from "../assets/ful.jpg";
-
 export default function ForgotPassword() {
- 
-
   return (
     <div className="min-h-screen w-full font-roboto flex items-center justify-center relative overflow-hidden">
       {/* Background Image */}
