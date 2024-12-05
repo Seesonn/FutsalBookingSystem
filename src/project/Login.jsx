@@ -54,9 +54,9 @@ export default function Login() {
               </button>
             </div>
             <div className="flex justify-end">
-              <a href="#" className="text-sm text-white hover:underline">
+             < Link to="/forget"className="text-sm text-white hover:underline">
                 Forgot Password?
-              </a>
+                </Link> 
             </div>
             <button className="w-full p-3 bg-[#04153F] text-white rounded-md flex items-center justify-center cursor-pointer hover:bg-[#04153F]/90 transition-colors">
               LOGIN
