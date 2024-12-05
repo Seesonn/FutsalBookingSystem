@@ -5,13 +5,7 @@ import { Link } from 'react-router-dom';
 import fgImage from "../assets/ful.jpg";
 
 export default function ForgotPassword() {
-  const [email, setEmail] = useState('');
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle password recovery logic here
-    console.log('Recovery email:', email);
-    // You can add your API call or other logic here
-  };
+ 
 
   return (
     <div className="min-h-screen w-full font-roboto flex items-center justify-center relative overflow-hidden">
@@ -37,7 +31,7 @@ export default function ForgotPassword() {
               <input
                 type="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+           
                 placeholder="Enter your email"
                 className="w-full p-3 bg-[#ebf8ff] border-none rounded-md"
                 required
