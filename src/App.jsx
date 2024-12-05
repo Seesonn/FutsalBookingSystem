@@ -10,7 +10,7 @@ import Login from "./project/Login";
 import Register from "./project/Register";
 import FutsalCardPage from "./project/FutsalcardPage";
 import BookingSlot from "./project/BookingSlots";
-import ForgotPassword from "./project/ForgetPassword";
+import ForgotPassword from "./project/ForgotPassword";
 import CreatNewPassword from "./project/CreateNewPassword";
 
 function App() {
