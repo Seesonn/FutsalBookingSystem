@@ -1,16 +1,14 @@
-
 import React, { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Logi from "../assets/is.png";
 import bgImage from "../assets/ful.jpg";
-
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
     <div className="min-h-screen w-full font-roboto flex items-center justify-center relative overflow-hidden">
-     
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
           src={bgImage}
@@ -18,13 +16,11 @@ export default function Login() {
           className="w-full h-full object-cover opacity-90"
         />
       </div>
-      
-      {/* Blur Overlay */}
       <div className="absolute inset-0 backdrop-blur-sm z-10"></div>
       
-     
+      {/* Content */}
       <div className="w-full max-w-4xl bg-green-100 bg-opacity-10 backdrop-blur-lg rounded-lg overflow-hidden flex flex-col md:flex-row shadow-lg z-20 m-4">
-       
+        {/* Form Container */}
         <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
           <h1 className="text-4xl font-bold mb-6 text-center text-white">Login</h1>
           <form className="flex flex-col gap-4">
@@ -54,7 +50,7 @@ export default function Login() {
               </button>
             </div>
             <div className="flex justify-end">
-             < Link to="/forget"className="text-sm text-white hover:underline">
+              < Link to="/forget"className="text-sm text-white hover:underline">
                 Forgot Password?
                 </Link> 
             </div>
